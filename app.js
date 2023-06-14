@@ -3,7 +3,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 require('dotenv').config();
-const puerto = process.env.puerto;
+const port = process.env.port;
 const app = express();
 
 
@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use('/',require('./routes/app.routes'));
 
-app.listen(puerto || 5000,()=>{
-    console.log(`servidor escuchando en http://localhost:${puerto}`);
+app.listen(port || 6000, ()=>{
+    console.log(`servidor escuchando en http://localhost:${port}`);
 })
 
